@@ -6,6 +6,10 @@
 package mystrategy;
 
 import data.DataGenerator;
+import sort.strategy.SortStrategy;
+import sort.methods.Methodsort;
+import sort.methods.Bubblesort;
+import sort.strategy.SortContext;
 
 /**
  *
@@ -22,10 +26,14 @@ public class Client {
         // http://www.algorytm.org/algorytmy-sortowania/
         
         double[] dataNonSort = DataGenerator.generate(100000);
-        
+        //double[] dataNonSort = DataGenerator.generate(10);
        /* Wzorzec Stratega */
         //...
        
+       SortContext context = new SortContext();
+       context.SetStrategy(new Bubblesort());
+       double time = context.Execute(dataNonSort);
         System.out.println("Time: ??");
+        System.out.println(time);
     }
 }
