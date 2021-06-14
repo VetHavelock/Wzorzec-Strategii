@@ -10,6 +10,7 @@ import sort.strategy.SortStrategy;
 import sort.methods.Methodsort;
 import sort.methods.Bubblesort;
 import sort.strategy.SortContext;
+import sort.methods.Selectionsort;
 
 /**
  *
@@ -25,14 +26,26 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
-        double[] dataNonSort = DataGenerator.generate(100000);
+        double[] dataNonSort = DataGenerator.generate(10000);
         //double[] dataNonSort = DataGenerator.generate(10);
        /* Wzorzec Stratega */
         //...
-       
-       SortContext context = new SortContext();
-       context.SetStrategy(new Bubblesort());
-       double time = context.Execute(dataNonSort);
+        SortContext context = new SortContext();
+        int n = 2;
+        double time = 0;
+        switch(n){
+            case 1:
+                
+                context.SetStrategy(new Bubblesort());
+                
+            case 2:
+                
+                context.SetStrategy(new Selectionsort());
+                
+            case 3:
+            case 4:
+        }
+        time = context.Execute(dataNonSort);
         System.out.println("Time: ??");
         System.out.println(time);
     }
