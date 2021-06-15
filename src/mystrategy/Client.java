@@ -11,6 +11,7 @@ import sort.methods.Methodsort;
 import sort.methods.Bubblesort;
 import sort.strategy.SortContext;
 import sort.methods.Selectionsort;
+import sort.methods.Insertionsort;
 
 /**
  *
@@ -26,12 +27,12 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
+        //double[] dataNonSort = DataGenerator.generate(5);
         double[] dataNonSort = DataGenerator.generate(10000);
-        //double[] dataNonSort = DataGenerator.generate(10);
        /* Wzorzec Stratega */
         //...
         SortContext context = new SortContext();
-        int n = 2;
+        int n = 3;
         double time = 0;
         switch(n){
             case 1:
@@ -43,6 +44,9 @@ public class Client {
                 context.SetStrategy(new Selectionsort());
                 
             case 3:
+                
+                context.SetStrategy(new Insertionsort());
+                
             case 4:
         }
         time = context.Execute(dataNonSort);

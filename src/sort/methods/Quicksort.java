@@ -9,6 +9,10 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort extends Methodsort{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
+    @Override
+    public  void Sort(double[] arr){
+        
+    }
 }
