@@ -17,6 +17,16 @@ import sort.methods.Insertionsort;
  *
  * @author LeopardProMK
  */
+//Odpowiedzi na pytania:
+//1. Strategia pozwala na stworzenie zasady wykonywania pewnego zakresu czynności programu,
+//pozwalając jednocześnie na rozbudowę (dodawanie dodatkowych metod określających dokładny sposób )
+//bez konieczności modyfikacji całego kodu
+//2.Istnieje możliwość zmiany algorytmu, ponieważ określony algorytm jest przypisywany 
+//do określonej klasy kontekstu
+//3.Zdefiniowana jest klasa abstrakcyjna reprezentująca metodę, która implementuje 
+//interfejs i która jest rozszerzana przez klasy kolejnych metod
+//4.Strategia jest użyteczna kiedy jedna czynność programu może być wykonanana 
+//na wiele sposobów, których wariant ma być wybierany w trakcie użytkowania
 public class Client {
 
     /**
