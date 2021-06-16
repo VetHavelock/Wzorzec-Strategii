@@ -14,5 +14,32 @@ public class Quicksort extends Methodsort{
     @Override
     public  void Sort(double[] arr){
         
+        quicksort(arr,0, arr.length-1);
     }
-}
+    private static void quicksort(double[] tab, int x, int y) {
+        int i,j;
+        double temp,v;
+        i=x;
+        j=y;
+        v=tab[(x+y) / 2];
+        do {
+            while (tab[i]<v)
+                i++;
+            while (v<tab[j])
+                j--;
+            if (i<=j) {
+                temp=tab[i];
+                tab[i]=tab[j];
+                tab[j]=temp;
+                i++;
+                j--;
+            }
+        }
+        while (i<=j);
+        if (x<j)
+            quicksort(tab,x,j);
+        if (i<y)
+            quicksort(tab,i,y);
+    }
+    }
+

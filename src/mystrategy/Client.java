@@ -12,6 +12,7 @@ import sort.methods.Bubblesort;
 import sort.strategy.SortContext;
 import sort.methods.Selectionsort;
 import sort.methods.Insertionsort;
+import sort.methods.Quicksort;
 
 /**
  *
@@ -42,7 +43,7 @@ public class Client {
        /* Wzorzec Stratega */
         //...
         SortContext context = new SortContext();
-        int n = 3;
+        int n = 4;
         double time = 0;
         switch(n){
             case 1:
@@ -58,6 +59,7 @@ public class Client {
                 context.SetStrategy(new Insertionsort());
                 
             case 4:
+                context.SetStrategy(new Quicksort());
         }
         time = context.Execute(dataNonSort);
         System.out.println("Time: ??");
